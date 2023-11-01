@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+</head>
+<link rel="stylesheet" href="{{url for('static', filename='estilo.css')}}">
+<body>
+    <h1>listagem</h1>
+    <table>
+        <tr><th>ID</th><th>Nome</th><th>Email</th><th>Opções</th></tr>
+        {%for registro in registros%}
+        <tr><td>{{registro[0]}}</td><td>{{registro[1]}}</td></tr><td>{{registro[2]}}</td></tr>
+        {% endfor %}
+
+    </table>
+    <br>
+    <a href="/adicionar">adicionar Novo Registro</a>
+</body>
+</html>
